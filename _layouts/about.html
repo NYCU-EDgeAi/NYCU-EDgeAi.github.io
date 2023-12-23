@@ -15,7 +15,7 @@ layout: default
                 {{page.affiliation}} <br/>
                 {{page.institution}} <br/>
                 {{page.email}} <br/>
-                {{page.office}}
+                {{page.bio}} {{page.office}}
               </p>
             </div>
           </div>
@@ -41,7 +41,26 @@ layout: default
         </header>
 
         <article>
-          <div class="clearfix">
+          <div id="bionote" class="alert alert-light" style="display: none;">
+            <!-- content -->
+            <div class="d-flex flex-wrap justify-content-around">
+              <div class="mb-3 mb-sm-none">
+                <h5>Office</h5>
+                <div class="mb-3">
+                  Room 530, Engineering Building 3<br/>
+                  National Yang Ming Chiao Tung University<br />
+                  No. 1001, Daxue Road<br />
+                  Hsinchu City 300093, Taiwan <br />
+                </div>
+                <h5>Phone</h5>
+                <div>
+                  +886-3-571-2121 #54734
+                </div>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.4707264501344!2d120.99598997488121!3d24.785408349200114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468360f96adabd7%3A0xedfd1ba0fa6c6bf7!2sEngineering%20Building%203%2C%20NYCU!5e0!3m2!1sen!2stw!4v1703353394354!5m2!1sen!2stw" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>     
+          </div>
+          <div>
             {{ content }}
           </div>
 
