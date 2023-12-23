@@ -4,16 +4,23 @@ layout: default
 
 <!-- about.html -->
       <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
-
-        <article>
+        <header class="post-header d-flex justify-content-center my-3">
+          <div class="info text-center mx-5">
+            <h1 class="post-title">
+              {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+            </h1>
+            <h2>{{page.subtitle}}</h2>
+            <div class="desc">
+                {{page.position}} <br/>
+                {{page.affiliation}} <br/>
+                {{page.institution}} <br/>
+                {{page.email}} <br/>
+                {{page.office}}
+              </p>
+            </div>
+          </div>
           {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
+          <div class="profile mx-1">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
@@ -29,14 +36,11 @@ layout: default
               alt=page.profile.image
               cache_bust=true -%}
             {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
-            </div>
-            {%- endif %}
           </div>
           {%- endif %}
+        </header>
 
+        <article>
           <div class="clearfix">
             {{ content }}
           </div>
