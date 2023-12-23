@@ -20,6 +20,8 @@
               {{- site.title -}}
             {%- endif -%}
           </a>
+          {%- elsif site.enable_school_logo -%}
+            <img src="assets/img/nycu_logo.png" height="32px" alt="nycu_logo" />
           {%- elsif site.enable_navbar_social -%}
           <!-- Social Icons -->
           <div class="navbar-brand social">
